@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>听香 - 传统香器展示</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        // 设置网页的过期时间（10小时后）
+        const expirationTime = new Date().getTime() + (10 * 60 * 60 * 1000); // 10小时转换为毫秒
+        
+        function checkExpiration() {
+            const currentTime = new Date().getTime();
+            if (currentTime > expirationTime) {
+                document.body.innerHTML = '<div style="text-align: center; padding: 50px;"><h1>页面已过期</h1><p>该页面已超过访问时限。</p></div>';
+            }
+        }
+
+        // 页面加载时检查
+        window.onload = checkExpiration;
+        // 每分钟检查一次
+        setInterval(checkExpiration, 60000);
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">
+                <h1>听香</h1>
+                <span class="en-name">Ting Xiang</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" class="active">主页</a></li>
+                <li><a href="#">畅销新品</a></li>
+                <li><a href="#">香水</a></li>
+                <li><a href="#">12月庆圣诞新年</a></li>
+                <li><a href="#">周边小物</a></li>
+                <li><a href="#">联络我们</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">购物车</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/hero.png" alt="香器展示">
+            </div>
+            <div class="hero-text">
+                <img src="images/title.png" alt="从悠久的历史中细嗅千年的芬芳">
+            </div>
+        </section>
+
+        <section class="product-grid">
+            <div class="product-item">
+                <img src="images/pic1.png" alt="香水瓶1">
+            </div>
+            <div class="product-item">
+                <img src="images/pic2.png" alt="香水瓶2">
+            </div>
+            <div class="product-item">
+                <img src="images/pic3.png" alt="香水瓶3">
+            </div>
+            <div class="product-item">
+                <img src="images/pic4.png" alt="香水瓶4">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 听香. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html> 
