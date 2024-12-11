@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <script>
         // 设置网页的过期时间（10小时后）
-        const expirationTime = new Date().getTime() + (10 * 60 * 60 * 1000); // 10小时转换为毫秒
+        const expirationTime = new Date().getTime() + (3 * 60 * 60 * 1000); // 10小时转换为毫秒
         
         function checkExpiration() {
             const currentTime = new Date().getTime();
             if (currentTime > expirationTime) {
-                document.body.innerHTML = '<div style="text-align: center; padding: 50px;"><h1>页面已过期</h1><p>该页面已超过访问时限。</p></div>';
+                document.body.innerHTML = '<div style="text-align: center; padding: 50px;"><h1>页面已过期</h1><p>该页面已超过访问时限，请联系1290672153@qq.com,我是开发者。</p></div>';
             }
         }
 
